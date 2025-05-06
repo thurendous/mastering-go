@@ -13,8 +13,10 @@ func main() {
 	greet("Funkei")
 	greet2(100)
 	showNumbers(1, 3, 5, 7, 9, 11)
+	showUsers("Funkei", "John", "Jane", "Chinchi")
 
 	// call function, has return value
+	fmt.Println("call function, has return value")
 	result := add(1, 2)
 	fmt.Println(result)
 
@@ -72,4 +74,10 @@ func showNumbers(numbers ...int) {
 // define a function, has anonymous function
 func calculate(a int, b int) (int, int) {
 	return a + b, a - b
+}
+
+func showUsers(users ...string) {
+	for i, user := range users {
+		fmt.Println(i, user)
+	}
 }
